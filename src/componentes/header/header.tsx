@@ -1,6 +1,15 @@
+//estilos
 import headStyle from './header.module.css';
+
+//extenciones
 import Image from 'next/image';
 import Link from 'next/link';
+
+//icons
+import { FaHome } from "react-icons/fa"; //casa
+import { TiThMenu } from "react-icons/ti"; //menu hamburguesa
+
+
 
 
 export default function Header() {
@@ -19,15 +28,21 @@ export default function Header() {
                 </div>
                 </Link>
 
-                {/*Navegacion con las paginas*/}
+                {/*Navegacion con las paginas en el Desktop*/}
                 <nav className={headStyle.menu}>
                     <ul>
-                        <li><Link href="#">Home</Link></li>
-                        <li><Link href="#">Destinos</Link></li>
-                        <li><Link href="#">Vida en Alemania</Link></li>
-                        <li><Link href="#">Nosotros</Link></li>
+                        <li><Link href="#"><FaHome className={headStyle.icon} /> Home</Link></li>
+                        <li><Link href="#"><FaHome className={headStyle.icon} /> Destinos</Link></li>
+                        <li><Link href="#"><FaHome className={headStyle.icon} /> Vida en Alemania</Link></li>
+                        <li><Link href="#"><FaHome className={headStyle.icon} /> Nosotros</Link></li>
                     </ul>
                 </nav>
+
+                {/*Navegacion con las paginas en el movil*/}
+
+                <div className={headStyle.menuMobilIcon}>
+                <TiThMenu size={40} /> 
+                    </div>
 
                 {/*boton para light- y darkmode*/}
                 <div className={headStyle.themeSwitcher}>
@@ -37,7 +52,18 @@ export default function Header() {
 
             </div>
 
+            {/*Menu desplegable para dispositivos moviles*/}
+
             <div className={headStyle.menuMobil}>
+
+            <nav className={headStyle.menu}>
+                    <ul>
+                        <li><Link href="#"><FaHome className={headStyle.icon} /> Home</Link></li>
+                        <li><Link href="#"><FaHome className={headStyle.icon} /> Destinos</Link></li>
+                        <li><Link href="#"><FaHome className={headStyle.icon} /> Vida en Alemania</Link></li>
+                        <li><Link href="#"><FaHome className={headStyle.icon} /> Nosotros</Link></li>
+                    </ul>
+                </nav>
 
             </div>
         

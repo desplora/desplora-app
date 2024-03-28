@@ -18,6 +18,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .logo{
@@ -30,12 +34,31 @@
 .menu ul{
     display: flex;
     justify-content: space-between;
+    width: max-content;
 }
 
+.menu ul li{
+    flex-wrap: nowrap;
+}
 .menu a{
     color: white;
     text-decoration: none;
     margin: 0 10px;
+    flex-wrap: nowrap;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.icon{
+    margin-right: 10px;
+}
+
+
+.menuMobilIcon{
+    display: none;
 }
 
 .themeSwitcher{
@@ -54,4 +77,52 @@
     background-color: #192446;
     border-radius: 100px;
     margin-left: 2px;
+    cursor: pointer;
 }
+
+
+
+/* Menu movil solo visible en celulares */
+
+.menuMobil{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    height: 500px;
+    background-color: #272e42;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.menuMobil ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+/* Path: src/componentes/header/header.js */
+
+
+
+@media (max-width: 768px){
+    .menuMobilIcon{
+        display: block;
+        margin: 0 40px;
+    }
+
+    .menu{
+        display: none;
+    }
+    
+}
+
