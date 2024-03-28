@@ -8,7 +8,7 @@
 }
 
 .menuDesktop, .header{
-    height: 70px;
+    height: 75px;
 }
 
 .menuDesktop{
@@ -24,28 +24,32 @@
     left: 0;
 }
 
+
+
 .logo{
-    height: 70%;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.logo img{
+    height: 100%;
+}
 
-.menu ul{
+.menuDesktopNav ul{
     display: flex;
     justify-content: space-between;
     width: max-content;
 }
 
-.menu ul li{
+.menuDesktopNav ul li{
     flex-wrap: nowrap;
 }
-.menu a{
+.menuDesktopNav a, .menuMovilNav a{
     color: white;
     text-decoration: none;
     margin: 0 10px;
     flex-wrap: nowrap;
-    width: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,16 +89,7 @@
 /* Menu movil solo visible en celulares */
 
 .menuMobil{
-    position: absolute;
-    top: 70px;
-    width: 100%;
-    height: 500px;
-    background-color: #272e42;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
+    display: none;
 }
 
 .menuMobil ul{
@@ -103,6 +98,7 @@
     justify-content: center;
     align-items: center;
 }
+
 
 
 
@@ -120,7 +116,25 @@
         margin: 0 40px;
     }
 
-    .menu{
+    .menuMobil{
+        display: block;
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        height: 500px;
+        background-color: #272e42;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .menuMovilNav li{
+        margin: 15px 0;
+    }
+
+    .menuDesktopNav{
         display: none;
     }
     

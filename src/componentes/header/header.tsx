@@ -8,40 +8,49 @@ import Link from 'next/link';
 //icons
 import { FaHome } from "react-icons/fa"; //casa
 import { TiThMenu } from "react-icons/ti"; //menu hamburguesa
+import { GiPretzel } from "react-icons/gi"; // Brezel
+import { BiWorld } from "react-icons/bi"; // mundo
+import { IoHeart } from "react-icons/io5"; // corazon
 
 
 
 
 export default function Header() {
+
+        const handleMenuClik = ()=>{
+
+        }
+
+
+
+
+
+
     return (
         <header className={headStyle.header}>
             <div className={headStyle.menuDesktop}>
 
                 {/*Logo de desplora*/}
-                <Link href="/">
-                <div className={headStyle.logo}>
-                    <Image 
+                <Link className={headStyle.logo} href="/">
+                    <img
                     src="/logo_desplora.webp" 
-                    alt="Logo desplora viajes" 
-                    width={60} 
-                    height={60} />
-                </div>
+                    alt="Logo desplora viajes" />
                 </Link>
 
                 {/*Navegacion con las paginas en el Desktop*/}
-                <nav className={headStyle.menu}>
+                <nav className={headStyle.menuDesktopNav}>
                     <ul>
                         <li><Link href="#"><FaHome className={headStyle.icon} /> Home</Link></li>
-                        <li><Link href="#"><FaHome className={headStyle.icon} /> Destinos</Link></li>
-                        <li><Link href="#"><FaHome className={headStyle.icon} /> Vida en Alemania</Link></li>
-                        <li><Link href="#"><FaHome className={headStyle.icon} /> Nosotros</Link></li>
+                        <li><Link href="#"><BiWorld className={headStyle.icon} /> Destinos</Link></li>
+                        <li><Link href="#"><GiPretzel className={headStyle.icon} /> Vida en Alemania</Link></li>
+                        <li><Link href="#"><IoHeart className={headStyle.icon} /> Nosotros</Link></li>
                     </ul>
                 </nav>
 
                 {/*Navegacion con las paginas en el movil*/}
 
                 <div className={headStyle.menuMobilIcon}>
-                <TiThMenu size={40} /> 
+                <TiThMenu  size={40} /> 
                     </div>
 
                 {/*boton para light- y darkmode*/}
@@ -56,12 +65,12 @@ export default function Header() {
 
             <div className={headStyle.menuMobil}>
 
-            <nav className={headStyle.menu}>
+            <nav className={headStyle.menuMovilNav}>
                     <ul>
                         <li><Link href="#"><FaHome className={headStyle.icon} /> Home</Link></li>
-                        <li><Link href="#"><FaHome className={headStyle.icon} /> Destinos</Link></li>
-                        <li><Link href="#"><FaHome className={headStyle.icon} /> Vida en Alemania</Link></li>
-                        <li><Link href="#"><FaHome className={headStyle.icon} /> Nosotros</Link></li>
+                        <li><Link href="#"><BiWorld className={headStyle.icon} /> Destinos</Link></li>
+                        <li><Link href="#"><GiPretzel className={headStyle.icon} /> Vida en Alemania</Link></li>
+                        <li><Link href="#"><IoHeart className={headStyle.icon} /> Nosotros</Link></li>
                     </ul>
                 </nav>
 

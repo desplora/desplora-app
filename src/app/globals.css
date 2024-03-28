@@ -16,3 +16,7 @@
     font-family: 'MiFuente', sans-serif !important;
 
 }
+
+body{
+  height: 200vh;
+}
