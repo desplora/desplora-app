@@ -15,6 +15,8 @@ import { BiWorld } from "react-icons/bi"; // mundo
 import { IoHeart } from "react-icons/io5"; // corazon
 import { IoMdSunny } from "react-icons/io"; // sol
 import { FaMoon } from "react-icons/fa"; // luna
+import { IoClose } from "react-icons/io5";
+
 
 let dark = true
 
@@ -25,13 +27,7 @@ export default function Header() {
     const [navOpen, setNavOpen] = useState(false);
 
     const movilNavHandler = () => {
-        const navMobilID = document.getElementById('navMobilID');
-        if (!navOpen) {
-            navMobilID.style.transform = 'translateY(0px)';
-        } else {
-            navMobilID.style.transform = 'translateY(-500px)';
-        }
-        setNavOpen(!navOpen);
+        setNavOpen(prevNavOpen => !prevNavOpen);
     };
 
     return (
@@ -58,7 +54,9 @@ export default function Header() {
                 {/*Navegacion con las paginas en el movil*/}
 
                 <div className={`${headStyle.menuMobilIcon} colorGrisClaro`}>
-                <TiThMenu onClick={movilNavHandler}  size={40} /> 
+                    {navOpen ?
+                    <IoClose onClick={movilNavHandler}  size={40} /> :
+                    <TiThMenu onClick={movilNavHandler}  size={40} /> }
                     </div>
 
                 {/*boton para light- y darkmode*/}
@@ -76,7 +74,7 @@ export default function Header() {
 
             {/*Menu desplegable para dispositivos moviles*/}
 
-            <div id='navMobilID' className={headStyle.menuMobil}>
+            <div id='navMobilID' style={{ transform: navOpen ? 'translateY(0px)' : 'translateY(-500px)' }} className={`${headStyle.menuMobil} colorGrisClaro`}>
 
             <nav className={headStyle.menuMovilNav}>
                     <ul>
