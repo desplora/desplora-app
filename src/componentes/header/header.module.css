@@ -66,26 +66,63 @@
     display: none;
 }
 
-.themeSwitcher{
-    background-color: blanchedalmond;
+.themeSwitcherLight, .themeSwitcherDark{
     height: 30px;
     width: 60px;
     border-radius: 100px;
     box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.705);
     display: flex;
     align-items: center;
+    transition: 0,5s;
+    position: relative;
 }
+
+.themeSwitcherLight{
+    background-color: #9cc3eb;
+}
+
+.themeSwitcherDark{
+    background-color: #171b33;
+}
+
+
 
 .toggle{
     height: 28px;
     aspect-ratio: 1/1;
-    background-color: #192446;
     border-radius: 100px;
-    margin-left: 2px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.themeSwitcherLight .toggle{
+    background-color: #ffae00;
+    margin-left: 2px;
+    color: white;
+    box-shadow: inset 0px 0px 6px rgba(124, 46, 0, 0.705);
+}
+
+.themeSwitcherDark .toggle{
+    background-color: #2c3e50;
+    margin-left: 30px;
+    color: rgb(145, 153, 180);
+    box-shadow: inset 0px 0px 6px rgba(6, 0, 61, 0.705);
+}
+
+.estrella{
+    position: absolute;
+    color: wheat;
+    left: 5px;
+}
+
+.nube{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    right: 5px;
 }
 
 

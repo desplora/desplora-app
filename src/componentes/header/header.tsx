@@ -15,16 +15,24 @@ import { BiWorld } from "react-icons/bi"; // mundo
 import { IoHeart } from "react-icons/io5"; // corazon
 import { IoMdSunny } from "react-icons/io"; // sol
 import { FaMoon } from "react-icons/fa"; // luna
-import { IoClose } from "react-icons/io5";
+import { IoClose } from "react-icons/io5"; // cerrar
+import { WiStars } from "react-icons/wi"; // estrellas
+import { FaCloud } from "react-icons/fa"; // nube
 
 
-let dark = true
+
+
 
 
 
 export default function Header() {
 
     const [navOpen, setNavOpen] = useState(false);
+    const [dark, setDark] = useState(true);
+
+    const changeModus = ()=>{
+        setDark(!dark);
+    }
 
     const movilNavHandler = () => {
         setNavOpen(prevNavOpen => !prevNavOpen);
@@ -60,14 +68,22 @@ export default function Header() {
                     </div>
 
                 {/*boton para light- y darkmode*/}
-                <div className={headStyle.themeSwitcher}>
-                    <div className={headStyle.toggle}>
 
-                        {!dark?
-                    <IoMdSunny className={`${headStyle.toggleIcon} colorAmarillo`} /> :
-                    <FaMoon className={`${headStyle.toggleIcon} colorGrisClaro`}/>}
+                <div className={dark?  headStyle.themeSwitcherDark : headStyle.themeSwitcherLight}>
+
+
+                    <div onClick={changeModus} className={headStyle.toggle}>
+
+                        {dark?
+                        <FaMoon className={`${headStyle.toggleIcon} `}/> :
+                        <IoMdSunny className={`${headStyle.toggleIcon} `} /> 
+                    }
 
                     </div>
+
+                    {dark?   <WiStars size={25} className={headStyle.estrella}/> : <FaCloud size={20} className={headStyle.nube}/> }
+
+
                 </div>
 
             </div>
