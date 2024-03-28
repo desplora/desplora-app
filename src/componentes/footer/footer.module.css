@@ -3,6 +3,8 @@
     width: 100%;
     padding: 10px;
     box-shadow: black 0px -2px 15px;
+    z-index: 20;
+    position: relative;
 }
 
 .contenido{
@@ -46,8 +48,48 @@
 }
 
 .contenedorPalmeras{
-    background-color: blanchedalmond;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    transform: translateY(10px);
+    z-index: 0;
+}
+
+.palm1, .palm2, .palm3, .palm4, .palm5{
+    
+    position: absolute;
+    bottom: 0;
+    z-index: 0 ;
+    transform-origin: bottom;
+}
+
+.palm1{
+    transform: rotate(70deg);
+    filter: hue-rotate(60deg) brightness(0.5);
+    height: 200px;
+}
+
+.palm2{
+    transform: rotate(35deg);
+    filter: hue-rotate(60deg) brightness(0.7);
+    height: 160px;
+}
+
+.palm3{
+    transform: rotate(0deg);
+    filter: hue-rotate(60deg) brightness(0.9);
+    height: 180px;
+}
+
+.palm4{
+    transform: rotate(-35deg);
+    filter: hue-rotate(60deg) brightness(0.7);
+    height: 160px;
+}
+
+.palm5{
+    transform: rotate(-70deg);
+    filter: hue-rotate(60deg) brightness(0.5);
+    height: 200px;
 }
