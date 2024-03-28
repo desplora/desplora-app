@@ -2,3 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'MiFuente';
+  src: url('/7Auwp_0qiz-afTLGLQ.woff2') format('woff2');
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MiFuente', sans-serif !important;
+
+}

@@ -7,13 +7,19 @@ export default function Header() {
     return (
         <header className={headStyle.header}>
             <div className={headStyle.menuDesktop}>
+
+                {/*Logo de desplora*/}
+                <Link href="/">
                 <div className={headStyle.logo}>
                     <Image 
                     src="/logo_desplora.webp" 
                     alt="Logo desplora viajes" 
-                    width={90} 
-                    height={90} />
+                    width={60} 
+                    height={60} />
                 </div>
+                </Link>
+
+                {/*Navegacion con las paginas*/}
                 <nav className={headStyle.menu}>
                     <ul>
                         <li><Link href="#">Home</Link></li>
@@ -22,6 +28,13 @@ export default function Header() {
                         <li><Link href="#">Nosotros</Link></li>
                     </ul>
                 </nav>
+
+                {/*boton para light- y darkmode*/}
+                <div className={headStyle.themeSwitcher}>
+                    <div className={headStyle.toggle}>
+                    </div>
+                </div>
+
             </div>
 
             <div className={headStyle.menuMobil}>
