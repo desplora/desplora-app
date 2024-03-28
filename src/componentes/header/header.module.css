@@ -1,6 +1,5 @@
 .header{
     width: 100%;
-    background-color: red;
     position: fixed;
     top: 0;
     left: 0;
@@ -13,7 +12,6 @@
 
 .menuDesktop{
     box-shadow: black 0px 2px 15px;
-    background-color: #192446;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -46,18 +44,21 @@
     flex-wrap: nowrap;
 }
 .menuDesktopNav a, .menuMovilNav a{
-    color: white;
     text-decoration: none;
     margin: 0 10px;
     flex-wrap: nowrap;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 700;
+    font-weight: 600;
+}
+
+.menuDesktopNav{
+    margin: 0 20px;
 }
 
 .icon{
-    margin-right: 10px;
+    margin-right: 8px;
 }
 
 
@@ -82,7 +83,11 @@
     border-radius: 100px;
     margin-left: 2px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 
 
@@ -114,6 +119,7 @@
     .menuMobilIcon{
         display: block;
         margin: 0 40px;
+        cursor: pointer;
     }
 
     .menuMobil{
@@ -128,6 +134,8 @@
         justify-content: center;
         align-items: center;
         z-index: 1;
+        transition: 1s;
+        transform: translateY(-500px);
     }
 
     .menuMovilNav li{

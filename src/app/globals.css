@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* configuracion general */
 
 @font-face {
   font-family: 'MiFuente';
@@ -17,6 +18,98 @@
 
 }
 
-body{
-  height: 200vh;
+:root {
+  --titulosLight: #ffffff;
+  --hoverBackgroundLight: #7184c26c;
+  --backgroundLight: #b4c1ce;
+  --grisLight: #e7e7e7;
+  --grisClaroLight: #26272e; 
+  --azulLight:rgb(40, 99, 226);
+  --amarilloLight: rgb(255, 196, 0);
+  --textosLight: rgb(27, 27, 27);
+
+  --menuTextoLight: rgb(218, 218, 218);
+  --menuBackgroundLight: #192446;
+  --sucheLigth: #ffae00;
+  --avtiveMenuLight:  #ffae00;
+  --iconsLight: #ffae00;
+
+
+  
+
+
+
+  --hoverBackgroundDark: #878c9c;
+  --backgroundDark: #22252c;
+  --grisOscuroDark: #cccccc;
+  --grisClaroDark: #26272e; 
+  --negroDark: #f1f1f1;
+  --blancoDark: rgb(255, 255, 255); 
+  --azulDark:rgb(40, 99, 226);
+  --amarilloDark: rgb(255, 196, 0);
+  --textosDark: rgb(255, 233, 205);
+ 
+  --iconsDark: #ffae00;
+
+
+
+  --TituloH1: 3.5rem; 
+
+  --TextoNormal: 1.1rem;
+  --textoNormalMargin: 10px 0;
+  --textoNormallineHeight: 30px;
+  --textoNormallineSpacing: 0.5px;
+
+  --tituloInformacinoH4: 1.5rem;
+  --tituloInformacinoH4: 1.5rem;
+  --tituloInformacinoH4: 1.5rem;
+  
+
+  --subtitulo: 1.2rem;
+  --subtituloMarginTop: 20px;
+  --subTituloDark: #7fadd8;
+  --subTituloLight: #002ba0;
+
+
+  --sliderScrollbarColor: var(--hoverBackgroundLight);
+  --sliderScrollbarBackgroundColor: #0000000c;
+  --sliderScrollbarHeight: 8px;
+}
+
+
+
+
+
+
+
+/*  Azul oscuro  */
+.fondoAzulOscuro{
+    background-color: #192446;
+}
+.colorAzulOscuro{
+  color: #192446;
+}
+
+/*  Gris Claro  */
+.fondoGrisClaro{
+  background-color: #b5b9c9;
+}
+.colorGrisClaro{
+    color: #b5b9c9;
+}
+
+/*  Celeste  */
+.fondoCeleste{
+  background-color: #b4c1ce;
+}
+.colorCeleste{
+  color: #b4c1ce;
+}
+
+/*  amarillo  */
+.fondoAmarillo{
+  background-color: #ffae00;
+}
+.colorAmarillo{
+  color: #ffae00;
 }
