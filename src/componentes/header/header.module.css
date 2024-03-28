@@ -51,7 +51,14 @@
     justify-content: center;
     align-items: center;
     font-weight: 600;
+    transition: 0.3s;
 }
+
+.menuDesktopNav a:hover, .menuMovilNav a:hover{
+    color: #ffae00;
+}
+
+
 
 .menuDesktopNav{
     margin: 0 20px;

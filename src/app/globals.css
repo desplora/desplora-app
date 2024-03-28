@@ -15,6 +15,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'MiFuente', sans-serif !important;
+    letter-spacing: 0.7px;
 
 }
 
@@ -78,7 +79,9 @@
 
 
 
-
+main{
+  min-height: 90vh;
+}
 
 
 

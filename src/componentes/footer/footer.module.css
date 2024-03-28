@@ -1,0 +1,53 @@
+.footer{
+    height: 400px;
+    width: 100%;
+    padding: 10px;
+    box-shadow: black 0px -2px 15px;
+}
+
+.contenido{
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+.creditos{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.creditos img{
+    height: 30px;
+    filter: invert(1) opacity(0.6);
+
+}
+
+.box{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconoMedia{
+    margin: 7px;
+    transition: 0.3s;
+}
+
+.iconoMedia:hover{
+    color: #ffae00;
+}
+
+.contenedorPalmeras{
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
