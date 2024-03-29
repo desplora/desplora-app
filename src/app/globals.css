@@ -82,11 +82,16 @@
 main{
   min-height: 90vh;
   overflow-x: hidden;
+  background-color: rgb(136, 157, 189);
+  padding: 100px 10%;
 }
 
 body{
   overflow-x: hidden;
 }
+
+
+/* Estilos de letra estrictos*/
 
 
 
@@ -120,4 +125,59 @@ body{
 }
 .colorAmarillo{
   color: #ffae00;
+}
+
+
+h1{
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+}
+
+h2{
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+
+h3{
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+
+p{
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+
+@media (min-width: 1024px){
+  main{
+    padding: 100px 24%;
+  }
+}
+
+
+
+
+@media (max-width: 1024px) and (min-width: 700px){
+  main{
+    padding: 100px 8%;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 700px){
+  main{
+    padding: 100px 40px;
+  }
 }
