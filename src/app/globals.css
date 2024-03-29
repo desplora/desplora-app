@@ -81,6 +81,11 @@
 
 main{
   min-height: 90vh;
+  overflow-x: hidden;
+}
+
+body{
+  overflow-x: hidden;
 }
 
 

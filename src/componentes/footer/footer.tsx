@@ -10,10 +10,10 @@ import { RiPinterestLine } from "react-icons/ri"; // pinterest
 export default function Footer() {
     return ( 
     
-        <div style={{ position: "relative"}}>
+        <div style={{ position: "relative", width: "100%", backgroundColor: "red"}}>
 
 
-        <div className={footerStyle.contenedorPalmeras}>
+<       div className={footerStyle.contenedorPalmeras}>
             <img className={footerStyle.palm1} src="/palmera desplora.webp" alt="palmeras" />
             <img className={footerStyle.palm2} src="/palmera desplora.webp" alt="palmeras" />
             <img className={footerStyle.palm3} src="/palmera desplora.webp" alt="palmeras" />

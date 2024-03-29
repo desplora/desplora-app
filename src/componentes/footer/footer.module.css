@@ -67,7 +67,7 @@
 .palm1{
     transform: rotate(70deg);
     filter: hue-rotate(60deg) brightness(0.5);
-    height: 200px;
+    height: 190px;
 }
 
 .palm2{
@@ -91,5 +91,15 @@
 .palm5{
     transform: rotate(-70deg);
     filter: hue-rotate(60deg) brightness(0.5);
-    height: 200px;
+    height: 190px;
+}
+
+
+
+@media  (max-width: 768px){
+
+.contenedorPalmeras{
+    transform: translateY(10px) scale(0.8);
+}
+    
 }
