@@ -14,3 +14,21 @@
 .portada h3{
     color: white;
 }
+
+
+
+
+@media (max-width: 700px){
+
+    .portada{
+        height: 200px;
+    }
+
+    .portada h1{
+        font-size: 1.3rem;
+    }
+
+    .portada h3{
+        font-size: 0.8rem;
+    }
+  }
