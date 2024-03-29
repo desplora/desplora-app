@@ -24,6 +24,12 @@
     font-weight: 700;
 }
 
+.credito{
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #b5b9c9;
+}
+
 .creditos img{
     height: 30px;
     filter: invert(1) opacity(0.6);

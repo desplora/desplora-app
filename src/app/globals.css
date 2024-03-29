@@ -19,6 +19,30 @@
 
 }
 
+h1{
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+}
+
+h2{
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+
+h3{
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+
+p{
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
 :root {
   --titulosLight: #ffffff;
   --hoverBackgroundLight: #7184c26c;
@@ -128,29 +152,7 @@ body{
 }
 
 
-h1{
-  font-size: 2rem;
-  font-weight: 800;
-  color: white;
-}
 
-h2{
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: rgb(0, 0, 0);
-}
-
-h3{
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: rgb(0, 0, 0);
-}
-
-p{
-  font-size: 1.02rem;
-  font-weight: 600;
-  color: rgb(0, 0, 0);
-}
 
 
 

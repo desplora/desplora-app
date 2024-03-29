@@ -8,6 +8,7 @@
     flex-direction: column;
     border-radius: 10px;
     text-shadow: rgba(0, 0, 0, 0.849) 0px 1px 10px;
+    text-align: center;
 }
 
 .portada h3{

@@ -38,11 +38,11 @@ export default function Footer() {
 
         </div>
         <div className={`${footerStyle.creditos} colorGrisClaro`} >
-            <p>Web Design: Diego Calle</p>
-            <p>Redacción: Aida P.M.</p>
+            <p className={footerStyle.credito}>Web Design: Diego Calle</p>
+            <p className={footerStyle.credito}>Redacción: Aida P.M.</p>
             <br/>
-            <p>Desplora 2024</p>
-            <p>© Todos los derechos reservados</p>
+            <p className={footerStyle.credito}>Desplora 2024</p>
+            <p className={footerStyle.credito}>© Todos los derechos reservados</p>
             <br/>
             <img  src="/logo desplora monocromo.png" alt="logo desplora monocromo" />
         </div>
