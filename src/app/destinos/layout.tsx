@@ -17,8 +17,8 @@ export default function DestinosLayout({
         <div>
             <nav className={destinosStyle.filtroCont}>
                 <div className={destinosStyle.continentes}>
-                {continentes.map((continente) => (
-                    <Link className={destinosStyle.miniatura} href={continente}>
+                {continentes.map((continente: string) => (
+                    <Link key={continente + " paises"} className={destinosStyle.miniatura} href={continente}>
                         <img alt={`destinos en ${continente}`} key={`icono desplora para ${continente}`} src={`https://desplora.com/medien/iconosDesplora/${continente}.webp`}/> 
                         <p key={`destinos en ${continente}`} >{continente}</p>
                     </Link>
