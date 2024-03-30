@@ -5,13 +5,8 @@ import { sql } from "@vercel/postgres";
 import TextoPrincipal from '@/componentes/textoPrincipal/textoPrincipal';
 
 
-export default async function Home({
-  params
-} : {
-  params: { user: string }
-}): Promise<JSX.Element> {
-  const { rows } = await sql`SELECT * from users`;
-  
+export default async function Home(){
+ 
   const data = await fetch('https://diegobarakus.github.io/apiAlimantador/Pages.json');
   const pagina = await data.json();
   

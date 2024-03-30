@@ -1,7 +1,5 @@
-export default function Destinos() {
+export default async function Destinos(){
     return (
-        <div>
-            <h1>Destinos</h1>
-        </div>
+        <p>Aqui aparecen las recomendaciones de ciudades</p>
     );
 }
