@@ -1,4 +1,4 @@
-import TP from "../estilos/textoPrincipal.module.css";
+import textoStyle from "./textoPrincipal.module.css";
 
 /*function Slider({arrayToMap}){
     return (
@@ -17,20 +17,20 @@ interface TextoPrincipalProps {
 
 const TextoPrincipal: React.FC<TextoPrincipalProps> = ({ contenidoPayload }) => {
     return (
-        <div>
+        <div className={textoStyle.textoprincipal}>
             {
             
             contenidoPayload.map( (item, index) => (
 
                 item.length < 25 && Array.isArray(item) && item[0] != "_" ?
-                /*<Slider key={index} arrayToMap={item} />*/  <p>{item}</p>        
+                /*<Slider key={index} arrayToMap={item} />*/  <p key={item + index} >{item}</p>        
                      
                 :
 
-                 item[0] == "_" ? <p><strong>{item.substring(1)}</strong></p> :
+                 item[0] == "_" ? <h3 key={item + " subtitulo"} >{item.substring(1)}</h3> :
                  
                  
-                 <p>{item}</p>
+                 <p key={item + " etxtoPrincipal"} >{item}</p>
             ))}
         </div>
     );
