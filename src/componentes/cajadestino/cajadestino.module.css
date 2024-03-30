@@ -1,0 +1,18 @@
+.miniatura{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+    
+    .miniatura img{
+    height: 100px;
+    filter: hue-rotate(-10deg) brightness(0.7);
+    }
+    
+    .miniatura p{
+    color: white;
+    font-size: 0.8rem;
+    }

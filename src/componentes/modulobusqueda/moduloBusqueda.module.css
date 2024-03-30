@@ -1,0 +1,39 @@
+.continentes {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.466);
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 10px;
+  }
+
+  .miniatura{
+    height: 60%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  .miniatura img{
+    width: 100px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(0.5) saturate(0.5);
+  }
+
+  .miniatura:hover img{
+    filter: brightness(1);
+}
+
+  .miniatura p{
+    font-size: 0.8rem;
+    color: white;
+}

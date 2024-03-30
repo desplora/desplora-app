@@ -1,6 +1,5 @@
 import React from 'react';
 import portadaStyle from './portada.module.css';
-import Image from 'next/image';
 
 
 interface PortadaProps {
