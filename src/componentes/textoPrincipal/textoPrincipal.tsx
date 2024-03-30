@@ -1,6 +1,6 @@
-import TP from "./textoPrincipal.module.css";
+import TP from "../estilos/textoPrincipal.module.css";
 
-function Slider({arrayToMap}){
+/*function Slider({arrayToMap}){
     return (
         <div className={TP.slider} >
             {arrayToMap.map( (item, index) => (
@@ -9,25 +9,31 @@ function Slider({arrayToMap}){
         </div>
     )
 
+}*/
+
+interface TextoPrincipalProps {
+    contenidoPayload: string[];
 }
 
-export default function TextoPrincipal({contenidoPayload, modus}) {
+const TextoPrincipal: React.FC<TextoPrincipalProps> = ({ contenidoPayload }) => {
     return (
-        <div className={`${modus ? TP.light : TP.dark}`}>
+        <div>
             {
             
             contenidoPayload.map( (item, index) => (
 
                 item.length < 25 && Array.isArray(item) && item[0] != "_" ?
-                <Slider key={index} arrayToMap={item} />           
+                /*<Slider key={index} arrayToMap={item} />*/  <p>{item}</p>        
                      
                 :
 
-                 item[0] == "_" ? <p className={TP.subtitulo}><strong>{item.substring(1)}</strong></p> :
+                 item[0] == "_" ? <p><strong>{item.substring(1)}</strong></p> :
                  
                  
-                 <p className={TP.textoNormal}>{item}</p>
+                 <p>{item}</p>
             ))}
         </div>
     );
 }
+
+export default TextoPrincipal;
