@@ -13,14 +13,14 @@
     box-shadow: rgba(0, 0, 0, 0.562) 0px 2px 8px;
   }
 
-  .continentes::-webkit-scrollbar, .paises::-webkit-scrollbar, .nopaises::-webkit-scrollbar {
+  .continentes::-webkit-scrollbar, .paises::-webkit-scrollbar, .nopaises::-webkit-scrollbar, .ciudades::-webkit-scrollbar {
     height: 9px;
     background-color: var(--sliderScrollbarBackgroundColor);
     border-radius: 10px;
   }
 
-.continentes::-webkit-scrollbar-thumb, .paises::-webkit-scrollbar-thumb, .nopaises::-webkit-scrollbar-thumb {
-    background: var(--sliderScrollbarColor);
+.continentes::-webkit-scrollbar-thumb, .paises::-webkit-scrollbar-thumb, .nopaises::-webkit-scrollbar-thumb, .ciudades::-webkit-scrollbar-thumb {
+    background: #0c1120;;
     border-radius: 10px;
     cursor: pointer;
   }
@@ -98,6 +98,16 @@ bottom: 0;
 }
 
 
+.ciudades{
+width: 90%;
+background-color: #19244528;
+margin: 0 auto;
+border-radius: 10px;
+display: flex;
+overflow-x: scroll;
+overflow-y: hidden;
+margin-top: 10px;
+}
 
 
 

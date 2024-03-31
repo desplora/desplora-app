@@ -2,7 +2,7 @@
 
 import React, { use } from 'react';
 import { useState, useEffect } from 'react';
-
+import Miniatura from '../miniatura/miniatura';
 import ModuloBusquedaStyle from './moduloBusqueda.module.css';
 
 
@@ -13,6 +13,7 @@ export default function ModuloBusqueda({data}: any){
     const [continenteActual, setContinenteActual] = useState("")
     const [destinosData, setDestinosData] = useState([])
     const [paisActual, setPaisActual] = useState([])
+    const [resultados, setResultados] = useState([])
 
     //effect
 
@@ -51,7 +52,8 @@ export default function ModuloBusqueda({data}: any){
     }, []);
 
 
-    
+    let filtrados = destinosData.filter( (item: any )=> item.continente.includes(continenteActual) && item.pais.includes(paisActual))
+
 
 
 
@@ -85,6 +87,13 @@ export default function ModuloBusqueda({data}: any){
                    </div>
                 ))}
                 <p className={`${arrayUnico.length > 0 ? ModuloBusquedaStyle.none : ModuloBusquedaStyle.noDestinos}`} >Pronto podrás ver nuestras experiencias en: {continenteActual}</p>
+                </div>
+
+                <div className={ModuloBusquedaStyle.ciudades}>
+                {filtrados.map((destino: any) => (
+                  <Miniatura key={`viajar a ${destino.titulo}, informacion en desplora`} imagen={destino.imagenPrincipal} titulo={destino.titulo} />
+                ))
+                  }
                 </div>
                 </>
             )
