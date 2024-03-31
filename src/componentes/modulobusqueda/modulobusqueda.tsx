@@ -77,6 +77,8 @@ export default function ModuloBusqueda({data}: any){
 
                 </div>
 
+
+                
                 
 
                 <div className={`${arrayUnico.length > 0? ModuloBusquedaStyle.paises : ModuloBusquedaStyle.nopaises}`}>
@@ -89,11 +91,23 @@ export default function ModuloBusqueda({data}: any){
                 <p className={`${arrayUnico.length > 0 ? ModuloBusquedaStyle.none : ModuloBusquedaStyle.noDestinos}`} >Pronto podrás ver nuestras experiencias en: {continenteActual}</p>
                 </div>
 
+                
+
                 <div className={ModuloBusquedaStyle.ciudades}>
                 {filtrados.map((destino: any) => (
                   <Miniatura key={`viajar a ${destino.titulo}, informacion en desplora`} imagen={destino.imagenPrincipal} titulo={destino.titulo} />
                 ))
                   }
+                </div>
+
+                
+
+                <div className={ModuloBusquedaStyle.infoPais}>
+                  <div className={ModuloBusquedaStyle.sombra}></div>
+                  <div className={`${paisActual.length > 2? ModuloBusquedaStyle.contenidoPais : ModuloBusquedaStyle.nocontenidoPais}`}>
+                    <h1>{paisActual}</h1>
+                    <p>Información de {paisActual}</p>
+                  </div>
                 </div>
                 </>
             )

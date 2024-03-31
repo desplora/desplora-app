@@ -1,5 +1,5 @@
 .miniaturaDesplora{
-height: 200px;
+height: 90%;
 min-width: 150px;
 position: relative;
 overflow: hidden;
@@ -19,7 +19,15 @@ padding: 10px;
   position: absolute;
   top: 0;
   z-index: 1;
+  filter: brightness(0.9);
+  transition: 0.4s;
 }
+
+a:hover .coverMiniatura{
+  filter: brightness(1.1);
+  transform: scale(1.1);
+}
+
 
 .miniaturaDesplora p{
  position: absolute;
