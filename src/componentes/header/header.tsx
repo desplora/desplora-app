@@ -21,18 +21,60 @@ import { FaCloud } from "react-icons/fa"; // nube
 
 
 
+import { useAppDispatch, useAppSelector } from '@/redux/hooks';
+import { changeModus, guardarDestinos, guardarPaginas } from '@/redux/features/memoriaSlice';
+
+//API Destinos
+import { useGetDestinosQuery, useGetPagesQuery, useGetArticulosQuery } from '@/redux/services/desploraApi';
+import { useCookies } from 'react-cookie';
 
 
 
 
 export default function Header() {
 
+    const modus = useAppSelector((state) => state.memoriaReducer.modus);
+
+    //llamar Apis de paginas y destinos
+    const dispatch = useAppDispatch();
+
+    let { data, error, isLoading, isFetching } = useGetDestinosQuery(null);
+    if(data){dispatch(guardarDestinos(data))}
+
+
+    //Dark mode
+
+    const [cookieModus, setCookieModus] = useCookies(['modoLight']);
+
+
+        const setCookie = ({value} : {value : any}) => {
+
+          setCookieModus('modoLight', value, {
+                path: '/',
+                maxAge: 30 * 24 * 60 * 60
+              });
+              
+        };
+
+        if(cookieModus.modoLight !== modus){
+          dispatch(changeModus(cookieModus.modoLight))
+        }
+
+    const handelModus = () => {
+      dispatch(changeModus(!modus))
+      setCookie({value: !modus})
+    }
+
+
+
+        
+    
+
+
+
+    //funciones del header
     const [navOpen, setNavOpen] = useState(false);
     const [dark, setDark] = useState(true);
-
-    const changeModus = ()=>{
-        setDark(!dark);
-    }
 
     const movilNavHandler = () => {
         setNavOpen(prevNavOpen => !prevNavOpen);
@@ -40,6 +82,7 @@ export default function Header() {
 
     return (
         <header className={headStyle.header}>
+            
             <div className={`${headStyle.menuDesktop} fondoAzulOscuro`}>
 
                 {/*Logo de desplora*/}
@@ -47,6 +90,7 @@ export default function Header() {
                     <img
                     src="/logo_desplora.webp" 
                     alt="Logo desplora viajes" />
+                    <p>{modus}</p>
                 </Link>
 
                 {/*Navegacion con las paginas en el Desktop*/}
@@ -69,19 +113,19 @@ export default function Header() {
 
                 {/*boton para light- y darkmode*/}
 
-                <div className={dark?  headStyle.themeSwitcherDark : headStyle.themeSwitcherLight}>
+                <div className={modus?  headStyle.themeSwitcherDark : headStyle.themeSwitcherLight}>
 
 
-                    <div onClick={changeModus} className={headStyle.toggle}>
+                    <div onClick={handelModus} className={headStyle.toggle}>
 
-                        {dark?
+                        {modus?
                         <FaMoon className={`${headStyle.toggleIcon} `}/> :
                         <IoMdSunny className={`${headStyle.toggleIcon} `} /> 
                     }
 
                     </div>
 
-                    {dark?   <WiStars size={25} className={headStyle.estrella}/> : <FaCloud size={20} className={headStyle.nube}/> }
+                    {modus?   <WiStars size={25} className={headStyle.estrella}/> : <FaCloud size={20} className={headStyle.nube}/> }
 
 
                 </div>

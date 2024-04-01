@@ -1,6 +1,6 @@
 .miniaturaDesplora{
 height: 90%;
-min-width: 150px;
+aspect-ratio: 9/13;
 position: relative;
 overflow: hidden;
 display: flex;
@@ -15,7 +15,7 @@ padding: 10px;
 
 .coverMiniatura{
   height: 100%;
-  min-width: 300px;
+  min-width: 390px;
   position: absolute;
   top: 0;
   z-index: 1;

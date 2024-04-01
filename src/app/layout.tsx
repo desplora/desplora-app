@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "../componentes/header/header";
 import Footer from "../componentes/footer/footer";
-
-
+import { MemoriaProvider } from "../redux/provider";
+import DarkLightSeter from "../componentes/darklightseter/darklightseter";
 
 export const metadata: Metadata = {
   title: "desplora",
@@ -15,16 +15,25 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+  
+
   return (
     <html lang="es">
-      
+      <MemoriaProvider>
       <body>
       <Header />
+      <DarkLightSeter>
       <main>
-        {children}
+        
+          {children}
+        
       </main>
+      </DarkLightSeter>
       <Footer/>
       </body>
+      </MemoriaProvider>
     </html>
   );
 }

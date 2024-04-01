@@ -7,6 +7,7 @@ export default async function Alemania() {
     return (
         <div>
         <Portada titulo={pagina[2].nombre_pagina} fondo={pagina[2].imagen_portada} descripcion={pagina[2].titulo_portada} />
+        <br/>
         <TextoPrincipal contenidoPayload={pagina[2].texto_introduccion} />
         </div>
     );

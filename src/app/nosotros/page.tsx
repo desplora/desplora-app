@@ -8,6 +8,7 @@ export default async function Nosotros() {
     return (
         <div>
             <Portada titulo={pagina[3].nombre_pagina} descripcion={pagina[3].titulo_portada} fondo={pagina[3].imagen_portada}/>
+            <br/>
             <TextoPrincipal contenidoPayload={pagina[3].texto_introduccion} />
         </div>
     );

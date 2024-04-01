@@ -3,6 +3,7 @@
 import Portada from '../componentes/portada/portada';
 import { sql } from "@vercel/postgres";
 import TextoPrincipal from '@/componentes/textoPrincipal/textoPrincipal';
+import SliderMiniaturas from '@/componentes/sliderminiaturas/sliderminiaturas';
 
 
 export default async function Home(){
@@ -15,7 +16,11 @@ export default async function Home(){
   return (
       <>
       <Portada descripcion="Te contamos todo sobre tú proximo destino" tituloEspecial={customTitulo} fondo={pagina[0].imagen_portada} />
+      <br/>
       <TextoPrincipal contenidoPayload={pagina[0].texto_introduccion} />
+      <br/>
+      <h3>Destinos que te podiran interesar</h3>
+      <SliderMiniaturas />
       </>
 
   );

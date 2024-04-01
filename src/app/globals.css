@@ -102,12 +102,29 @@ p{
 }
 
 
+/*dark */
+
+
+
+
 
 main{
   min-height: 90vh;
   overflow-x: hidden;
   background-color: rgb(136, 157, 189);
   padding: 100px 10%;
+}
+
+.dark main{
+  background-color: var(--backgroundDark);
+}
+
+.dark p{
+  color: var(--textosDark);
+}
+
+.dark h3{
+  color: var(--backgroundLight);
 }
 
 body{
