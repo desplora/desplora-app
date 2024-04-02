@@ -43,39 +43,13 @@ export default function Header() {
 
 
     //Dark mode
-
-    const [cookieModus, setCookieModus] = useCookies(['modoLight']);
-
-
-        const setCookie = ({value} : {value : any}) => {
-
-          setCookieModus('modoLight', value, {
-                path: '/',
-                maxAge: 30 * 24 * 60 * 60
-              });
-              
-        };
-
-        if(cookieModus.modoLight !== modus){
-          dispatch(changeModus(cookieModus.modoLight))
-        }
-
-    const handelModus = () => {
-      dispatch(changeModus(!modus))
-      setCookie({value: !modus})
-    }
-
-
-
-        
     
-
-
+    const handelModus = () => {
+        dispatch(changeModus(!modus))  
+    }
 
     //funciones del header
     const [navOpen, setNavOpen] = useState(false);
-    const [dark, setDark] = useState(true);
-
     const movilNavHandler = () => {
         setNavOpen(prevNavOpen => !prevNavOpen);
     };
@@ -90,9 +64,7 @@ export default function Header() {
                     <img
                     src="/logo_desplora.webp" 
                     alt="Logo desplora viajes" />
-                    <p>{modus}</p>
                 </Link>
-
                 {/*Navegacion con las paginas en el Desktop*/}
                 <nav className={`${headStyle.menuDesktopNav} colorGrisClaro`}>
                     <ul>
@@ -113,19 +85,19 @@ export default function Header() {
 
                 {/*boton para light- y darkmode*/}
 
-                <div className={modus?  headStyle.themeSwitcherDark : headStyle.themeSwitcherLight}>
+                <div onClick={handelModus} className={!modus?  headStyle.themeSwitcherDark : headStyle.themeSwitcherLight}>
 
 
-                    <div onClick={handelModus} className={headStyle.toggle}>
+                    <div className={headStyle.toggle}>
 
-                        {modus?
+                        {!modus? 
                         <FaMoon className={`${headStyle.toggleIcon} `}/> :
                         <IoMdSunny className={`${headStyle.toggleIcon} `} /> 
                     }
 
                     </div>
 
-                    {modus?   <WiStars size={25} className={headStyle.estrella}/> : <FaCloud size={20} className={headStyle.nube}/> }
+                    {!modus?    <WiStars size={25} className={headStyle.estrella}/> : <FaCloud size={20} className={headStyle.nube}/> }
 
 
                 </div>

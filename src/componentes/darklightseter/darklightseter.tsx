@@ -8,7 +8,7 @@ export default function DarkLightSeter({children}: props){
    const  modus = useAppSelector((state) => state.memoriaReducer.modus);
 
     return (
-        <div className={`${modus? "dark" : "light"}`}>
+        <div className={`${!modus? "dark" : "light"}`}>
             {children}
         </div>
     )

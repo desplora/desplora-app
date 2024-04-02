@@ -1,0 +1,22 @@
+.contenedor{
+height: 300px;
+width: 100%;
+background-color: brown;
+border-radius: 10px;
+overflow: hidden;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.contenedor h1{
+position: relative;
+z-index: 1;
+text-shadow: black 1px 1px 5px;
+}
+
+.contenedor img{
+position: absolute;
+top: 0;
+}

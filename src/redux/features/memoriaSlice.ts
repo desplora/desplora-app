@@ -10,7 +10,7 @@ export const memoriaSlice = createSlice({
         currentContinente: "",
         currentPais: "",
         currentCiudad: "",
-        modus: false,
+        modus: true,
         test: "funciona"
     },
     reducers: {
