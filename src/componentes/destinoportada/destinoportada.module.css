@@ -1,7 +1,7 @@
 .contenedor{
+padding: 5px;
 height: 300px;
 width: 100%;
-background-color: brown;
 border-radius: 10px;
 overflow: hidden;
 position: relative;
@@ -14,9 +14,23 @@ align-items: center;
 position: relative;
 z-index: 1;
 text-shadow: black 1px 1px 5px;
+text-align: center;
 }
 
 .contenedor img{
 position: absolute;
 top: 0;
 }
+
+
+
+@media (max-width: 768px){
+    .contenedor img{
+        height: 120%;
+        min-width: 600px;
+    }
+
+    .contenedor h1{
+        font-size: 1.5rem;
+    }
+  }

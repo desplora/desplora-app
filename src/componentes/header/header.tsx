@@ -69,9 +69,9 @@ export default function Header() {
                 <nav className={`${headStyle.menuDesktopNav} colorGrisClaro`}>
                     <ul>
                         <li><Link href="/"><FaHome className={headStyle.icon} /> Home</Link></li>
-                        <li><Link href="destinos"><BiWorld className={headStyle.icon} /> Destinos</Link></li>
-                        <li><Link href="alemania"><GiPretzel className={headStyle.icon} /> Vida en Alemania</Link></li>
-                        <li><Link href="nosotros"><IoHeart className={headStyle.icon} /> Nosotros</Link></li>
+                        <li><Link href="/destinos"><BiWorld className={headStyle.icon} /> Destinos</Link></li>
+                        <li><Link href="/alemania"><GiPretzel className={headStyle.icon} /> Vida en Alemania</Link></li>
+                        <li><Link href="/nosotros"><IoHeart className={headStyle.icon} /> Nosotros</Link></li>
                     </ul>
                 </nav>
 
@@ -111,9 +111,9 @@ export default function Header() {
             <nav className={headStyle.menuMovilNav}>
                     <ul>
                         <li><Link onClick={movilNavHandler} href="/"><FaHome className={headStyle.icon} /> Home</Link></li>
-                        <li><Link onClick={movilNavHandler} href="destinos"><BiWorld className={headStyle.icon} /> Destinos</Link></li>
-                        <li><Link onClick={movilNavHandler} href="alemania"><GiPretzel className={headStyle.icon} /> Vida en Alemania</Link></li>
-                        <li><Link onClick={movilNavHandler} href="nosotros"><IoHeart className={headStyle.icon} /> Nosotros</Link></li>
+                        <li><Link onClick={movilNavHandler} href="/destinos"><BiWorld className={headStyle.icon} /> Destinos</Link></li>
+                        <li><Link onClick={movilNavHandler} href="/alemania"><GiPretzel className={headStyle.icon} /> Vida en Alemania</Link></li>
+                        <li><Link onClick={movilNavHandler} href="/nosotros"><IoHeart className={headStyle.icon} /> Nosotros</Link></li>
                     </ul>
                 </nav>
 
